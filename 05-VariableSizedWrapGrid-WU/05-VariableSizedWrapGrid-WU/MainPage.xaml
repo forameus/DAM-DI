@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="_05_VariableSizedWrapGrid_WU.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:_05_VariableSizedWrapGrid_WU"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="White">
+        <VariableSizedWrapGrid VerticalAlignment="Top" HorizontalAlignment="Center" Orientation="Vertical">
+
+            <Button VerticalAlignment="Top">Botoncico</Button>
+            <Button MinHeight="60">Botonaco</Button>
+            <Button VerticalAlignment="Bottom">Botonito</Button>           
+            
+        </VariableSizedWrapGrid>        
+    </Grid>
+</Page>

@@ -1,0 +1,16 @@
+C:\Users\anavarro\Desktop\DI\Visual Studio\Hello Worlds\01-HelloWorldWPF\01-HelloWorldWPF-VB\bin\Debug\01-HelloWorldWPF-VB.exe.config
+C:\Users\anavarro\Desktop\DI\Visual Studio\Hello Worlds\01-HelloWorldWPF\01-HelloWorldWPF-VB\bin\Debug\01-HelloWorldWPF-VB.exe
+C:\Users\anavarro\Desktop\DI\Visual Studio\Hello Worlds\01-HelloWorldWPF\01-HelloWorldWPF-VB\bin\Debug\01-HelloWorldWPF-VB.pdb
+C:\Users\anavarro\Desktop\DI\Visual Studio\Hello Worlds\01-HelloWorldWPF\01-HelloWorldWPF-VB\bin\Debug\01-HelloWorldWPF-VB.xml
+C:\Users\anavarro\Desktop\DI\Visual Studio\Hello Worlds\01-HelloWorldWPF\01-HelloWorldWPF-VB\obj\Debug\01-HelloWorldWPF-VB.vbprojResolveAssemblyReference.cache
+C:\Users\anavarro\Desktop\DI\Visual Studio\Hello Worlds\01-HelloWorldWPF\01-HelloWorldWPF-VB\obj\Debug\MainWindow.g.vb
+C:\Users\anavarro\Desktop\DI\Visual Studio\Hello Worlds\01-HelloWorldWPF\01-HelloWorldWPF-VB\obj\Debug\Application.g.vb
+C:\Users\anavarro\Desktop\DI\Visual Studio\Hello Worlds\01-HelloWorldWPF\01-HelloWorldWPF-VB\obj\Debug\01-HelloWorldWPF-VB_MarkupCompile.cache
+C:\Users\anavarro\Desktop\DI\Visual Studio\Hello Worlds\01-HelloWorldWPF\01-HelloWorldWPF-VB\obj\Debug\01-HelloWorldWPF-VB_MarkupCompile.lref
+C:\Users\anavarro\Desktop\DI\Visual Studio\Hello Worlds\01-HelloWorldWPF\01-HelloWorldWPF-VB\obj\Debug\MainWindow.baml
+C:\Users\anavarro\Desktop\DI\Visual Studio\Hello Worlds\01-HelloWorldWPF\01-HelloWorldWPF-VB\obj\Debug\01-HelloWorldWPF-VB.g.resources
+C:\Users\anavarro\Desktop\DI\Visual Studio\Hello Worlds\01-HelloWorldWPF\01-HelloWorldWPF-VB\obj\Debug\_01_HelloWorldWPF_VB.Resources.resources
+C:\Users\anavarro\Desktop\DI\Visual Studio\Hello Worlds\01-HelloWorldWPF\01-HelloWorldWPF-VB\obj\Debug\01-HelloWorldWPF-VB.vbproj.GenerateResource.Cache
+C:\Users\anavarro\Desktop\DI\Visual Studio\Hello Worlds\01-HelloWorldWPF\01-HelloWorldWPF-VB\obj\Debug\01-HelloWorldWPF-VB.exe
+C:\Users\anavarro\Desktop\DI\Visual Studio\Hello Worlds\01-HelloWorldWPF\01-HelloWorldWPF-VB\obj\Debug\01-HelloWorldWPF-VB.xml
+C:\Users\anavarro\Desktop\DI\Visual Studio\Hello Worlds\01-HelloWorldWPF\01-HelloWorldWPF-VB\obj\Debug\01-HelloWorldWPF-VB.pdb

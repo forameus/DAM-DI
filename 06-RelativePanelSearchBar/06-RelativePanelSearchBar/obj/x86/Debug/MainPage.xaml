@@ -1,0 +1,31 @@
+﻿<Page
+    x:Class="_06_RelativePanelSearchBar.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:_06_RelativePanelSearchBar"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <RelativePanel Grid.Row="0">
+            <TextBlock x:ConnectionId='1' Text="Title" Name="TxtTitulo" FontSize="28" FontWeight="Bold" RelativePanel.AlignVerticalCenterWithPanel="True"/>
+            <TextBlock x:ConnectionId='2' Text="Search:" Name="TxtBusqueda" RelativePanel.LeftOf="CampoBusqueda" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="10"/>
+            <TextBox x:ConnectionId='3' Name="CampoBusqueda" RelativePanel.LeftOf="BtnBuscar" Text="" RelativePanel.AlignVerticalCenterWithPanel="True" MinWidth="180"/>
+            <Button x:ConnectionId='4' Name="BtnBuscar" Content="Search" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="10"/>
+        </RelativePanel>
+
+        <RelativePanel Grid.Row="2" Background="LightGray">
+            <TextBlock Text="Items:10"  RelativePanel.AlignVerticalCenterWithPanel="True" Margin="4"/>
+            <TextBlock Text="User:Bob" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="4"/>
+            <TextBlock Text="Version 1.0.0" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="4"/>
+        </RelativePanel>
+    </Grid>
+</Page>
+

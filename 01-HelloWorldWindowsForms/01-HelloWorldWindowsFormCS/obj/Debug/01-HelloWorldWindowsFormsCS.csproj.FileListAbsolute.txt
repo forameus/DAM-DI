@@ -1,0 +1,9 @@
+C:\Users\anavarro\Desktop\DI\Visual Studio\Hello Worlds\01-HelloWorldWindowsForms\01-HelloWorldWindowsFormCS\bin\Debug\01-HelloWorldWindowsFormCS.exe.config
+C:\Users\anavarro\Desktop\DI\Visual Studio\Hello Worlds\01-HelloWorldWindowsForms\01-HelloWorldWindowsFormCS\bin\Debug\01-HelloWorldWindowsFormCS.exe
+C:\Users\anavarro\Desktop\DI\Visual Studio\Hello Worlds\01-HelloWorldWindowsForms\01-HelloWorldWindowsFormCS\bin\Debug\01-HelloWorldWindowsFormCS.pdb
+C:\Users\anavarro\Desktop\DI\Visual Studio\Hello Worlds\01-HelloWorldWindowsForms\01-HelloWorldWindowsFormCS\obj\Debug\01-HelloWorldWindowsFormsCS.csprojResolveAssemblyReference.cache
+C:\Users\anavarro\Desktop\DI\Visual Studio\Hello Worlds\01-HelloWorldWindowsForms\01-HelloWorldWindowsFormCS\obj\Debug\_01_HelloWorldWindowsFormCS.Form1.resources
+C:\Users\anavarro\Desktop\DI\Visual Studio\Hello Worlds\01-HelloWorldWindowsForms\01-HelloWorldWindowsFormCS\obj\Debug\_01_HelloWorldWindowsFormCS.Properties.Resources.resources
+C:\Users\anavarro\Desktop\DI\Visual Studio\Hello Worlds\01-HelloWorldWindowsForms\01-HelloWorldWindowsFormCS\obj\Debug\01-HelloWorldWindowsFormsCS.csproj.GenerateResource.Cache
+C:\Users\anavarro\Desktop\DI\Visual Studio\Hello Worlds\01-HelloWorldWindowsForms\01-HelloWorldWindowsFormCS\obj\Debug\01-HelloWorldWindowsFormCS.exe
+C:\Users\anavarro\Desktop\DI\Visual Studio\Hello Worlds\01-HelloWorldWindowsForms\01-HelloWorldWindowsFormCS\obj\Debug\01-HelloWorldWindowsFormCS.pdb
