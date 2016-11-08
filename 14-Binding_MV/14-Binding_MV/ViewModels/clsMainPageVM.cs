@@ -17,7 +17,7 @@ namespace _14_Binding_MV.ViewModels
 
         public clsMainPageVM()
         {
-            lista = new clsListado().lista;
+            lista = new clsListado(15).lista;
         }
     }
 }
