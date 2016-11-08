@@ -26,7 +26,7 @@ namespace _14_Binding_MV.Models
             lista = new ObservableCollection<clsPersona>();
             for (int i = 0; i < num; i++)
             {
-                lista.Add(new clsPersona(generaNombre(),generaNombre()+" "+generaNombre(), i+1, new DateTime(1952, 7, 13), generaNombre(), "666 666 666"));
+                lista.Add(new clsPersona(generaNombre(),generaNombre()+" "+generaNombre(), i+1, new DateTime(r.Next(1900, 2000), r.Next(1, 12), r.Next(1, 29)), "C/"+generaNombre()+" "+ generaNombre()+", "+generaNombre(), "666 666 666"));
             }
         }
 
