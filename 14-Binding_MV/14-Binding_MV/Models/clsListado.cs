@@ -7,6 +7,8 @@ namespace _14_Binding_MV.Models
 {
     public class clsListado
     {
+        private Random r = new Random();
+
         public ObservableCollection<clsPersona> lista { get; set; }
 
 
@@ -30,8 +32,7 @@ namespace _14_Binding_MV.Models
 
         private string generaNombre()
         {
-            string res = null; res = "";
-            Random r = new Random();
+            string res = "";            
 
             //Crear arrays
             char[] vocales = "aeiou".ToCharArray();
