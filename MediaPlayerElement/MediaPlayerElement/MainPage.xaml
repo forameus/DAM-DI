@@ -34,10 +34,5 @@
         <!--Reproductor-->
         <MediaPlayerElement  Name="reproductor"  AutoPlay="False" AreTransportControlsEnabled="True" Stretch="Uniform" Grid.Row="1" Margin="0"/>    
 
-
-
     </Grid>
 </Page>
-
-
-<!--Source="Videos/video1.mp4"-->
