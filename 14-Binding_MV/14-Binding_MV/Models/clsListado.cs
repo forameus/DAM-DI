@@ -26,7 +26,7 @@ namespace _14_Binding_MV.Models
             lista = new ObservableCollection<clsPersona>();
             for (int i = 0; i < num; i++)
             {
-                lista.Add(new clsPersona(generaNombre(),generaNombre()+" "+generaNombre(), i+1, new DateTime(r.Next(1900, 2000), r.Next(1, 12), r.Next(1, 29)), "C/"+generaNombre()+" "+ generaNombre()+", "+generaNombre(), "666 666 666"));
+                lista.Add(new clsPersona(generaNombre(),generaNombre()+" "+generaNombre(), i+1, new DateTime(r.Next(1900, 2000), r.Next(1, 12), r.Next(1, 29)), "C/"+generaNombre()+" "+ generaNombre()+", "+generaNombre(), generaTelf()));
             }
         }
 
@@ -57,6 +57,22 @@ namespace _14_Binding_MV.Models
 
             if (r.Next(0, 10) == 1)
                 res = "Fernando";
+
+            return res;
+        }
+
+        private string generaTelf()
+        {
+            string res = "";
+            char[] nums = "0123456789".ToCharArray();
+
+            for (int i = 0; i < 11; i++)
+            {
+                if (i == 3 || i == 7)
+                    res += " ";
+                else
+                    res += (char)nums.GetValue(r.Next(0, nums.GetLength(0)));
+            }
 
             return res;
         }
