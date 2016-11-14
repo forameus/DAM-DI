@@ -17,22 +17,37 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
-        
+
         <!--Columna Izquierda-->
 
-        
-        <ScrollViewer IsEnabled="True">
-            <ListView Name="lvPersonas" ItemsSource="{Binding lista}" DisplayMemberPath="nombre">
-                <!--<ListViewItem Content="K Pasa"/>-->
-            </ListView>
-        </ScrollViewer>
-        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="9*"/>
+            </Grid.RowDefinitions>
+
+            <Button Content="Guardar" Click="btnGuardar_Click" Grid.Column="0" Grid.Row="0" MinWidth="213" MinHeight="36"/>
+            <ScrollViewer IsEnabled="True" Grid.Column="0" Grid.Row="1">
+                
+                
+                
+                <ListView Name="lvPersonas" SelectedItem="{Binding Path=Persona, Mode=TwoWay}" ItemsSource="{Binding lista, Mode=TwoWay}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding Path=Apellidos}"/>
+                                <TextBlock Text=", "/>
+                                <TextBlock Text="{Binding Path=Nombre}" Margin="2,0,0,0"/>
+                            </StackPanel>
+                        </DataTemplate>
+                     </ListView.ItemTemplate>  
+                </ListView>
+            </ScrollViewer>
+        </Grid>
 
 
 
-
-
-        <Grid Grid.Column="1" Background="Beige">
+        <Grid Grid.Column="1" Background="Beige" DataContext="{Binding Persona, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
@@ -48,21 +63,21 @@
 
 
             <TextBlock Grid.Row="0" Grid.Column="0" Text="Nombre:" VerticalAlignment="Center"/>
-            <TextBox  Grid.Row="0" Grid.Column="1" Margin="2" Background="White" Text="{Binding ElementName=lvPersonas, Path=SelectedItem.nombre}"/>
+            <TextBox Name="txtNombre" Grid.Row="0" Grid.Column="1" Margin="2" Background="White" Text="{Binding Nombre, Mode=TwoWay, UpdateSourceTrigger=Explicit}"/>
             <TextBlock Grid.Row="1" Text="Apellidos:" VerticalAlignment="Center"/>
-            <TextBox  Grid.Row="1" Grid.Column="1" Margin="2" Background="White" Text="{Binding ElementName=lvPersonas, Path=SelectedItem.apellidos}"/>
+            <TextBox Name="txtApellidos" Grid.Row="1" Grid.Column="1" Margin="2" Background="White"  Text="{Binding Apellidos, Mode=TwoWay, UpdateSourceTrigger=Explicit}"/>
             <TextBlock Grid.Row="2" Text="Fecha de Nacimiento:" VerticalAlignment="Center"/>
-            <TextBox  Grid.Row="2" Grid.Column="1" Margin="2" Background="White" Text="{Binding ElementName=lvPersonas, Path=SelectedItem.fechaNac}"/>
+            <TextBox Name="txtTelefono" Grid.Row="2" Grid.Column="1" Margin="2" Background="White" Text="{Binding fechaNac, Mode=TwoWay, UpdateSourceTrigger=Explicit}"/>
             <TextBlock Grid.Row="3" Text="Teléfono:" VerticalAlignment="Center"/>
-            <TextBox  Grid.Row="3" Grid.Column="1" Margin="2" Background="White" Text="{Binding ElementName=lvPersonas, Path=SelectedItem.telefono}"/>
+            <TextBox Name="txtFechaNac" Grid.Row="3" Grid.Column="1" Margin="2" Background="White" Text="{Binding telefono, Mode=TwoWay, UpdateSourceTrigger=Explicit}"/>
             <TextBlock Grid.Row="4" Text="Dirección:" VerticalAlignment="Center"/>
 
             <ScrollViewer Grid.Row="5" Grid.ColumnSpan="2" Margin="2">
-                <TextBox  TextWrapping="Wrap" Background="White" IsEnabled="True" Text="{Binding ElementName=lvPersonas, Path=SelectedItem.direccion}"/>
+                <TextBox Name="txtDireccion" TextWrapping="Wrap" Background="White" IsEnabled="True" Text="{Binding direccion, Mode=TwoWay, UpdateSourceTrigger=Explicit}"/>
             </ScrollViewer>
 
 
         </Grid>
-        
+
     </Grid>
 </Page>

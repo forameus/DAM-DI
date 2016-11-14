@@ -26,7 +26,17 @@ namespace _14_Binding_MV
         public MainPage()
         {
             this.InitializeComponent();
-            //lvPersonas.ItemsSource = new clsListado().lista;
+        }
+
+
+        private void btnGuardar_Click(Object sender, RoutedEventArgs e)
+        {
+            txtNombre.GetBindingExpression(TextBox.TextProperty).UpdateSource();
+            txtApellidos.GetBindingExpression(TextBox.TextProperty).UpdateSource();
+            txtFechaNac.GetBindingExpression(TextBox.TextProperty).UpdateSource();
+            txtFechaNac.GetBindingExpression(TextBox.TextProperty).UpdateSource();
+            txtDireccion.GetBindingExpression(TextBox.TextProperty).UpdateSource();
+            lvPersonas.GetBindingExpression(ListView.ItemsSourceProperty).UpdateSource();
         }
     }
 }
