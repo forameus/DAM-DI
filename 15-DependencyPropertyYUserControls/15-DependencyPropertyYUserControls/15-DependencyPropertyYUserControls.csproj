@@ -102,6 +102,9 @@
     <Compile Include="UserControls\fichaAlumno.xaml.cs">
       <DependentUpon>fichaAlumno.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\fichaAnimador.xaml.cs">
+      <DependentUpon>fichaAnimador.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -130,6 +133,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="UserControls\fichaAlumno.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\fichaAnimador.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
