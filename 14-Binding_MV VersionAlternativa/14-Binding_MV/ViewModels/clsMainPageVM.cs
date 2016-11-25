@@ -16,6 +16,10 @@ namespace _14_Binding_MV.ViewModels
         private clsPersona _personaSeleccionada;
         public ObservableCollection<clsPersona> lista { get; set; }
         public event PropertyChangedEventHandler PropertyChanged;
+
+        private DelegateCommand _buscarCommand;
+        private DelegateCommand _eliminarCommand;
+        private string textoABuscar;
         #endregion
 
         public clsMainPageVM()
@@ -46,6 +50,62 @@ namespace _14_Binding_MV.ViewModels
         {
             lista.Remove(_personaSeleccionada);
         }
+
+
+
+
+
+
+
+
+        public DelegateCommand buscarCommand
+        {
+            get
+            {
+                _buscarCommand = new DelegateCommand(BuscarCommand_Executed, BuscarCommand_CanExecute);
+                return _buscarCommand;
+            }
+        }
+
+       
+        public DelegateCommand eliminarCommand
+        {
+            get
+            {
+                _eliminarCommand = new DelegateCommand(EliminarCommand_Executed, EliminarCommand_CanExecute);
+                return _eliminarCommand;
+            }
+        }
+
+        private bool BuscarCommand_CanExecute()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void BuscarCommand_Executed()
+        {
+            throw new NotImplementedException();
+        }
+
+
+
+
+        private void EliminarCommand_Executed()
+        {
+            lista.Remove(_personaSeleccionada);
+        }
+
+        private bool EliminarCommand_CanExecute()
+        {
+            bool sePuedeBorrar = true;
+
+            /*if (_personaSeleccionada == null)
+                sePuedeBorrar = false;*/
+
+            return sePuedeBorrar;
+        }
+
+       
 
     }
 }

@@ -31,6 +31,7 @@ namespace _14_Binding_MV
         {
             this.InitializeComponent();
             this.ViewModel = (clsMainPageVM) this.DataContext;
+
         }
 
 

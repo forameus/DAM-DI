@@ -12,7 +12,7 @@
         <vm:clsMainPageVM/>
     </Page.DataContext>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="2*"/>
@@ -26,14 +26,13 @@
                 <RowDefinition Height="9*"/>
             </Grid.RowDefinitions>
 
-            <Grid Grid.Column="0" Grid.Row="0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Button Content="Guardar" Click="btnGuardar_Click" MinWidth="100" Grid.Column="0"/>
-                <Button Content="Borrar" Click="{x:Bind ViewModel.btnBorrar_Click}" MinWidth="100" Grid.Column="1"/>
-            </Grid>
+            
+               <StackPanel Orientation="Horizontal">
+                    <AppBarButton Icon="Save" Click="btnGuardar_Click"/>
+                    <AppBarButton Icon="Delete" Click="{x:Bind ViewModel.btnBorrar_Click}"/>
+                    <AppBarButton Icon="Delete" Command="{Binding eliminarCommand}" Background="Aquamarine"/>
+                </StackPanel>
+            
             <ScrollViewer IsEnabled="True" Grid.Column="0" Grid.Row="1">
                 
                 
