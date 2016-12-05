@@ -45,6 +45,13 @@ namespace _14_Binding_MV
             lvPersonas.GetBindingExpression(ListView.ItemsSourceProperty).UpdateSource();
         }
 
+        private void ListView_RightTapped(object sender, RightTappedRoutedEventArgs e)
+        {
+            ListView listView = (ListView)sender;
+            listView.SelectedItem = e.GetPosition;
+            allContactsMenuFlyout.ShowAt(listView, e.GetPosition(listView));
+
+        }
         
     }
 }

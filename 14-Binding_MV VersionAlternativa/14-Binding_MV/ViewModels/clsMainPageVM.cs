@@ -19,12 +19,12 @@ namespace _14_Binding_MV.ViewModels
 
         private DelegateCommand _buscarCommand;
         private DelegateCommand _eliminarCommand;
-        private string textoABuscar;
+        private string _textoABuscar;
         #endregion
 
         public clsMainPageVM()
         {
-            lista = new clsListado(15).lista;
+            lista = new clsListado(15).lista;            
         }
 
         public clsPersona Persona
@@ -37,7 +37,22 @@ namespace _14_Binding_MV.ViewModels
             set
             {
                 _personaSeleccionada = value;
+                _eliminarCommand.RaiseCanExecuteChanged();
                 OnProperyChanged("Persona");
+            }
+        }
+
+        public string textoABuscar
+        {
+            get
+            {
+                return _textoABuscar;
+            }
+
+            set
+            {
+                _textoABuscar = value;
+                OnProperyChanged("textoABuscar");
             }
         }
 
@@ -46,7 +61,7 @@ namespace _14_Binding_MV.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
 
-        public void btnBorrar_Click(Object sender, RoutedEventArgs e)
+        public void btnBorrar_Click(object sender, RoutedEventArgs e)
         {
             lista.Remove(_personaSeleccionada);
         }
@@ -84,6 +99,16 @@ namespace _14_Binding_MV.ViewModels
 
         private void BuscarCommand_Executed()
         {
+            if (string.IsNullOrEmpty(_textoABuscar))
+            {
+                var listaFiltrada = from p in lista where p.Nombre.StartsWith(_textoABuscar) select p;
+                lista = new ObservableCollection<clsPersona>(listaFiltrada);
+            }
+            else
+            {
+                //clsListado listaPersonas = lita;
+            }
+
             throw new NotImplementedException();
         }
 
@@ -103,9 +128,7 @@ namespace _14_Binding_MV.ViewModels
                 sePuedeBorrar = false;*/
 
             return sePuedeBorrar;
-        }
-
-       
+        }       
 
     }
 }
