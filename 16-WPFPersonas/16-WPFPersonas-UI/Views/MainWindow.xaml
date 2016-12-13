@@ -14,16 +14,19 @@
     <DockPanel LastChildFill="True">
         <Menu DockPanel.Dock="Top" Background="LightGray">
             <StackPanel Orientation="Horizontal">
-                <Button ToolTip="Nuevo" Name="cmdNew" Command="{Binding Path=Nuevo}">
-                    <Image Source="../Assets/new.png" MaxHeight="36"/>
+                <Button ToolTip="Nuevo" Name="cmdNew" Command="{Binding insertarCommand}">
+                    <Image Source="../Assets/new.png" MaxHeight="72"/>
                 </Button>
                 <Button ToolTip="Guardar" Name="cmdSave" Command="{Binding guardarCommand}" Click="btnGuardar_Click">
-                    <Image Source="../Assets/save.png" MaxHeight="36"/>
+                    <Image Source="../Assets/save.png" MaxHeight="72"/>
                 </Button>
                 <Button ToolTip="Borrar" Name="cmdDelete" Command="{Binding eliminarCommand}">
-                    <Image Source="../Assets/delete.png" MaxHeight="36"/>
+                    <Image Source="../Assets/delete.png" MaxHeight="72"/>
                 </Button>
-                <Button ToolTip="Pegar" Name="cmdPegar" Command="{Binding Path=Pegar}">
+                <Button ToolTip="Actualizar" Name="cmdRefresh" Command="{Binding actualizarCommand}">
+                    <Image Source="../Assets/refresh.jpg" MaxHeight="72"></Image>
+                </Button>
+                <Button ToolTip="Pegar" Name="cmdPegar" Command="{Binding pegarCommand}">
                     <Image Source="../Assets/pegar.jpg" MaxHeight="72"/>
                 </Button>
             </StackPanel>     
@@ -36,9 +39,9 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="{Binding Path=apellidos}"/>
-                            <TextBlock Text=", "/>
-                            <TextBlock Text="{Binding Path=nombre}" Margin="2,0,0,0"/>
+                            <TextBlock Text="{Binding Path=nombre}"/>
+                            <TextBlock Text=" "/>
+                            <TextBlock Text="{Binding Path=apellidos}"/>    
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>

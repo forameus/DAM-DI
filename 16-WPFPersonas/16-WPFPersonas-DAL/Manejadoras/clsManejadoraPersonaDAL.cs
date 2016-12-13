@@ -40,7 +40,7 @@ namespace _16_WPFPersonas_DAL.Manejadoras
             //Añadir datos al comando
             miComando.Parameters.Add("@nombre", System.Data.SqlDbType.VarChar).Value = persona.nombre;
             miComando.Parameters.Add("@apellidos", System.Data.SqlDbType.VarChar).Value = persona.apellidos;
-            miComando.Parameters.Add("@fechaNac", System.Data.SqlDbType.VarChar).Value = persona.fechaNac;
+            miComando.Parameters.Add("@fechaNac", System.Data.SqlDbType.DateTime).Value = persona.fechaNac;
             miComando.Parameters.Add("@direccion", System.Data.SqlDbType.VarChar).Value = persona.direccion;
             miComando.Parameters.Add("@telefono", System.Data.SqlDbType.VarChar).Value = persona.telefono;
 
@@ -76,7 +76,7 @@ namespace _16_WPFPersonas_DAL.Manejadoras
             miComando.Parameters.Add("@id", System.Data.SqlDbType.VarChar).Value = persona.id;
             miComando.Parameters.Add("@nombre", System.Data.SqlDbType.VarChar).Value = persona.nombre;
             miComando.Parameters.Add("@apellidos", System.Data.SqlDbType.VarChar).Value = persona.apellidos;
-            miComando.Parameters.Add("@fechaNac", System.Data.SqlDbType.VarChar).Value = persona.fechaNac;
+            miComando.Parameters.Add("@fechaNac", System.Data.SqlDbType.DateTime).Value = persona.fechaNac;
             miComando.Parameters.Add("@direccion", System.Data.SqlDbType.VarChar).Value = persona.direccion;
             miComando.Parameters.Add("@telefono", System.Data.SqlDbType.VarChar).Value = persona.telefono;
 
