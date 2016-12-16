@@ -28,7 +28,7 @@ namespace _16_WPFPersonas_UI.ViewModels
 
         public clsMainPageVM()
         {
-            lista = new clsListadosBL().getListadoPersonaBL();
+            lista = new clsListadosBL().getListadoPersonaBL();            
             nuevo = false;
         }
 
