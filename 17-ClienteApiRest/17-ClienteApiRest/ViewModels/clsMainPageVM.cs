@@ -60,18 +60,19 @@ namespace _17_ClienteApiRest.ViewModels
             }
         }
 
-        private void EliminarCommand_Executed()
+        private async void EliminarCommand_Executed()
         {
             HttpStatusCode respuesta;
             clsManejadoraPersona mp = new clsManejadoraPersona();
             ContentDialog confirmarBorrado = new ContentDialog();
 
             confirmarBorrado.Title = "Eliminar";
-            confirmarBorrado.Content = "¿Seguro?";
+            confirmarBorrado.Content = "¿Seguro que quieres eliminar a esta persona?";
             confirmarBorrado.PrimaryButtonText = "Cancelar";
             confirmarBorrado.SecondaryButtonText = "Aceptar";
 
             ContentDialogResult resultado = await confirmarBorrado.ShowAsync();
+            //TODO:Terminar
         }
 
         private bool EliminarCommand_CanExecute()
@@ -82,68 +83,6 @@ namespace _17_ClienteApiRest.ViewModels
             return sePuedeBorrar;
         }
 
-
-
-
-
-
-
-        public DelegateCommand buscarCommand
-        {
-            get
-            {
-                _buscarCommand = new DelegateCommand(BuscarCommand_Executed, BuscarCommand_CanExecute);
-                return _buscarCommand;
-            }
-        }
-
-       
-        public DelegateCommand eliminarCommand
-        {
-            get
-            {
-                _eliminarCommand = new DelegateCommand(EliminarCommand_Executed, EliminarCommand_CanExecute);
-                return _eliminarCommand;
-            }
-        }
-
-        private bool BuscarCommand_CanExecute()
-        {
-            throw new NotImplementedException();
-        }
-
-        private void BuscarCommand_Executed()
-        {
-            if (string.IsNullOrEmpty(_textoABuscar))
-            {
-                var listaFiltrada = from p in lista where p.Nombre.StartsWith(_textoABuscar) select p;
-                lista = new ObservableCollection<clsPersona>(listaFiltrada);
-            }
-            else
-            {
-                //clsListado listaPersonas = lita;
-            }
-
-            throw new NotImplementedException();
-        }
-
-
-
-
-        private void EliminarCommand_Executed()
-        {
-            lista.Remove(_personaSeleccionada);
-        }
-
-        private bool EliminarCommand_CanExecute()
-        {
-            bool sePuedeBorrar = true;
-
-            /*if (_personaSeleccionada == null)
-                sePuedeBorrar = false;*/
-
-            return sePuedeBorrar;
-        }   
         
         private async void rellenaLista()
         {
