@@ -43,12 +43,18 @@ namespace _17_ClienteApiRest.ViewModels
         }
 
         
-
+        
         protected void OnProperyChanged(string name)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
 
+        private async void rellenaLista()
+        {
+            clsListado oListado = new clsListado();
+            lista = await oListado.getPersonas();
+            OnProperyChanged("lista");
+        }
 
         //Eliminar
         public DelegateCommand eliminarCommand
@@ -72,24 +78,24 @@ namespace _17_ClienteApiRest.ViewModels
             confirmarBorrado.SecondaryButtonText = "Aceptar";
 
             ContentDialogResult resultado = await confirmarBorrado.ShowAsync();
-            //TODO:Terminar
+            if (resultado == ContentDialogResult.Secondary){
+                clsManejadoraPersona cmp = new clsManejadoraPersona();
+                cmp.EliminarPersona(_personaSeleccionada.id);
+                rellenaLista();
+            }
+
         }
 
         private bool EliminarCommand_CanExecute()
         {
-            bool sePuedeBorrar = true;
-            if (_personaSeleccionada == null)
-                sePuedeBorrar = false;
+            bool sePuedeBorrar = false;
+            if (_personaSeleccionada != null)
+                sePuedeBorrar = true;
             return sePuedeBorrar;
         }
 
         
-        private async void rellenaLista()
-        {
-            clsListado oListado = new clsListado();
-            lista = await oListado.getPersonas();
-            OnProperyChanged("lista");
-        }    
+           
 
     }
 }
