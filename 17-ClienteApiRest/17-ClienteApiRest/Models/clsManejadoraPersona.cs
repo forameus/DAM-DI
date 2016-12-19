@@ -26,5 +26,21 @@ namespace _17_ClienteApiRest.Models
             }
         }
 
+        /*public async void ActualizarPersona(clsPersona p)
+        {
+            HttpClient cliente = new HttpClient();
+
+            try
+            {
+                Uri miUri = new Uri(url + p.id);
+               
+                await cliente.PostAsync(miUri, )
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }*/
+
     }
 }
