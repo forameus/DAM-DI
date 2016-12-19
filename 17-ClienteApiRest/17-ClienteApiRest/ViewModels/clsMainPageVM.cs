@@ -18,13 +18,14 @@ namespace _17_ClienteApiRest.ViewModels
         private clsPersona _personaSeleccionada;
         public ObservableCollection<clsPersona> lista { get; set; }
         public event PropertyChangedEventHandler PropertyChanged;
-  
+
         private DelegateCommand _eliminarCommand;
+        private DelegateCommand _guardarCommand;
         #endregion
 
         public clsMainPageVM()
         {
-            rellenaLista();    
+            rellenaLista();
         }
 
         public clsPersona Persona
@@ -42,8 +43,8 @@ namespace _17_ClienteApiRest.ViewModels
             }
         }
 
-        
-        
+
+
         protected void OnProperyChanged(string name)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
@@ -78,9 +79,9 @@ namespace _17_ClienteApiRest.ViewModels
             confirmarBorrado.SecondaryButtonText = "Aceptar";
 
             ContentDialogResult resultado = await confirmarBorrado.ShowAsync();
-            if (resultado == ContentDialogResult.Secondary){
-                clsManejadoraPersona cmp = new clsManejadoraPersona();
-                cmp.EliminarPersona(_personaSeleccionada.id);
+            if (resultado == ContentDialogResult.Secondary)
+            {
+                mp.EliminarPersona(_personaSeleccionada.id);
                 rellenaLista();
             }
 
@@ -94,8 +95,27 @@ namespace _17_ClienteApiRest.ViewModels
             return sePuedeBorrar;
         }
 
-        
-           
+        //Guardar
+        public DelegateCommand guardarCommand
+        {
+            get
+            {
+                _eliminarCommand = new DelegateCommand(GuardarCommand_Executed);
+                return _eliminarCommand;
+            }
+        }
+
+        private async void GuardarCommand_Executed()
+        {
+            HttpStatusCode respuesta;
+            clsManejadoraPersona mp = new clsManejadoraPersona();
+            
+            //TODO: Terminar
+            //mp.ActualizarPersona(_personaSeleccionada);
+            rellenaLista();
+        }
 
     }
+
 }
+
