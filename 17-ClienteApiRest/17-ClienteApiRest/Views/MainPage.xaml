@@ -24,8 +24,9 @@
 
         <!--AppBar-->
         <StackPanel Orientation="Horizontal"  Grid.Row="0" MaxHeight="70">
-            <AppBarButton Icon="Save" Label="Guardar"/>
+            <AppBarButton Icon="Save" Label="Guardar" Click="btnGuardar_Click" Command="{Binding guardarCommand}"/>
             <AppBarButton Icon="Delete" Label="Eliminar" Command="{Binding eliminarCommand}"/>
+            <AppBarButton Icon="Refresh" Label="Recargar" Command="{Binding recargarCommand}"/>
             <TextBox Name="txtBuscar"  MinWidth="200" />
             <AppBarButton Icon="Find" Label="Buscar"/>
         </StackPanel>

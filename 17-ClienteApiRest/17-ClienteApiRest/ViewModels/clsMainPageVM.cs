@@ -21,6 +21,8 @@ namespace _17_ClienteApiRest.ViewModels
 
         private DelegateCommand _eliminarCommand;
         private DelegateCommand _guardarCommand;
+        private DelegateCommand _recargarCommand;
+        private DelegateCommand _insertarCommand;
         #endregion
 
         public clsMainPageVM()
@@ -69,7 +71,6 @@ namespace _17_ClienteApiRest.ViewModels
 
         private async void EliminarCommand_Executed()
         {
-            HttpStatusCode respuesta;
             clsManejadoraPersona mp = new clsManejadoraPersona();
             ContentDialog confirmarBorrado = new ContentDialog();
 
@@ -95,23 +96,53 @@ namespace _17_ClienteApiRest.ViewModels
             return sePuedeBorrar;
         }
 
+
         //Guardar
         public DelegateCommand guardarCommand
         {
             get
             {
-                _eliminarCommand = new DelegateCommand(GuardarCommand_Executed);
-                return _eliminarCommand;
+                _guardarCommand = new DelegateCommand(GuardarCommand_Executed);
+                return _guardarCommand;
             }
         }
 
         private async void GuardarCommand_Executed()
         {
-            HttpStatusCode respuesta;
             clsManejadoraPersona mp = new clsManejadoraPersona();
-            
-            //TODO: Terminar
-            //mp.ActualizarPersona(_personaSeleccionada);
+            mp.ActualizarPersona(_personaSeleccionada);
+            await Task.Delay(1000);
+            rellenaLista();
+        }
+
+        //Recargar
+        public DelegateCommand recargarCommand
+        {
+            get
+            {
+                _recargarCommand = new DelegateCommand(RecargarCommand_Executed);
+                return _recargarCommand;
+            }
+        }
+
+        private void RecargarCommand_Executed()
+        {           
+           
+            rellenaLista();
+        }
+
+        //Insertar
+        public DelegateCommand insertarCommand
+        {
+            get
+            {
+                _insertarCommand = new DelegateCommand(InsertarCommand_Executed);
+                return _insertarCommand;
+            }
+        }
+
+        private void InsertarCommand_Executed()
+        {
             rellenaLista();
         }
 
