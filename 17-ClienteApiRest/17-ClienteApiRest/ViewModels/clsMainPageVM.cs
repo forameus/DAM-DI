@@ -18,6 +18,7 @@ namespace _17_ClienteApiRest.ViewModels
         private clsPersona _personaSeleccionada;
         public ObservableCollection<clsPersona> lista { get; set; }
         public event PropertyChangedEventHandler PropertyChanged;
+        public bool progRing { get; set; }
 
         private DelegateCommand _eliminarCommand;
         private DelegateCommand _guardarCommand;
@@ -28,6 +29,9 @@ namespace _17_ClienteApiRest.ViewModels
         public clsMainPageVM()
         {
             rellenaLista();
+            _eliminarCommand = new DelegateCommand(EliminarCommand_Executed, EliminarCommand_CanExecute);
+            _guardarCommand = new DelegateCommand(GuardarCommand_Executed, GuardarCommand_CanExecute);
+            progRing = false; OnProperyChanged("progRing");
         }
 
         public clsPersona Persona
@@ -39,8 +43,12 @@ namespace _17_ClienteApiRest.ViewModels
 
             set
             {
+                if(_personaSeleccionada!=null)
+                    if (_personaSeleccionada.id == -1)
+                        lista.Remove(_personaSeleccionada);
                 _personaSeleccionada = value;
                 _eliminarCommand.RaiseCanExecuteChanged();
+                _guardarCommand.RaiseCanExecuteChanged();
                 OnProperyChanged("Persona");
             }
         }
@@ -57,6 +65,7 @@ namespace _17_ClienteApiRest.ViewModels
             clsListado oListado = new clsListado();
             lista = await oListado.getPersonas();
             OnProperyChanged("lista");
+            progRing = false; OnProperyChanged("progRing");
         }
 
         //Eliminar
@@ -64,13 +73,13 @@ namespace _17_ClienteApiRest.ViewModels
         {
             get
             {
-                _eliminarCommand = new DelegateCommand(EliminarCommand_Executed, EliminarCommand_CanExecute);
                 return _eliminarCommand;
             }
         }
 
         private async void EliminarCommand_Executed()
         {
+            progRing = true; OnProperyChanged("progRing");
             clsManejadoraPersona mp = new clsManejadoraPersona();
             ContentDialog confirmarBorrado = new ContentDialog();
 
@@ -91,8 +100,10 @@ namespace _17_ClienteApiRest.ViewModels
         private bool EliminarCommand_CanExecute()
         {
             bool sePuedeBorrar = false;
-            if (_personaSeleccionada != null)
-                sePuedeBorrar = true;
+            if (_personaSeleccionada != null)            
+                if (_personaSeleccionada.id != -1)
+                    sePuedeBorrar = true;                
+            
             return sePuedeBorrar;
         }
 
@@ -101,18 +112,30 @@ namespace _17_ClienteApiRest.ViewModels
         public DelegateCommand guardarCommand
         {
             get
-            {
-                _guardarCommand = new DelegateCommand(GuardarCommand_Executed);
+            {                
                 return _guardarCommand;
             }
         }
 
+        private bool GuardarCommand_CanExecute()
+        {
+            bool sePuedeBorrar = false;
+            if (_personaSeleccionada != null)
+                sePuedeBorrar = true;
+            return sePuedeBorrar;
+        }
         private async void GuardarCommand_Executed()
         {
+            progRing = true;OnProperyChanged("progRing");          
             clsManejadoraPersona mp = new clsManejadoraPersona();
-            mp.ActualizarPersona(_personaSeleccionada);
+            if (_personaSeleccionada.id == -1)
+                mp.InsertarPersona(_personaSeleccionada);
+            else
+                mp.ActualizarPersona(_personaSeleccionada);
+
             await Task.Delay(1000);
             rellenaLista();
+            
         }
 
         //Recargar
@@ -143,7 +166,11 @@ namespace _17_ClienteApiRest.ViewModels
 
         private void InsertarCommand_Executed()
         {
-            rellenaLista();
+            clsPersona p = new clsPersona("", "", -1, DateTime.Today, "", "");
+            lista.Add(p);
+            Persona = p;
+            OnProperyChanged("lista");
+
         }
 
     }

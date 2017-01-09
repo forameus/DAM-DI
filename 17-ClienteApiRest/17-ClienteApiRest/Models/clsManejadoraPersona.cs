@@ -49,10 +49,31 @@ namespace _17_ClienteApiRest.Models
             catch (Exception)
             {
                 throw;
-            }
-
-            
+            }            
         }
 
+        public async void InsertarPersona(clsPersona p)
+        {
+            HttpClient cliente = new HttpClient();
+            HttpResponseMessage res;
+            try
+            {
+                Uri miUri = new Uri(url);
+
+                //Crear Json
+                string jsonPersona = JsonConvert.SerializeObject(p);
+
+                // Create the IHttpContent
+                IHttpContent contenidoPersona = new HttpStringContent(jsonPersona, Windows.Storage.Streams.UnicodeEncoding.Utf8, "application/json");
+
+                res = await cliente.PostAsync(miUri, contenidoPersona);
+
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

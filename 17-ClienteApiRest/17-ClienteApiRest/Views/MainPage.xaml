@@ -23,12 +23,12 @@
 
 
         <!--AppBar-->
-        <StackPanel Orientation="Horizontal"  Grid.Row="0" MaxHeight="70">
+        <StackPanel Orientation="Horizontal"  Grid.Row="0" MaxHeight="70">            
+            <AppBarButton Icon="NewFolder" Label="Nuevo" Command="{Binding insertarCommand}"/>
             <AppBarButton Icon="Save" Label="Guardar" Click="btnGuardar_Click" Command="{Binding guardarCommand}"/>
             <AppBarButton Icon="Delete" Label="Eliminar" Command="{Binding eliminarCommand}"/>
             <AppBarButton Icon="Refresh" Label="Recargar" Command="{Binding recargarCommand}"/>
-            <TextBox Name="txtBuscar"  MinWidth="200" />
-            <AppBarButton Icon="Find" Label="Buscar"/>
+            <ProgressRing Name="progressRing" IsActive="{Binding progRing, UpdateSourceTrigger=PropertyChanged}" MinHeight="40" MinWidth="40" HorizontalAlignment="Right"/>
         </StackPanel>
 
 
