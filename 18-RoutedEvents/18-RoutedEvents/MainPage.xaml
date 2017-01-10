@@ -10,7 +10,7 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel>
             <Rectangle  Name="ColorAsul" Fill="Blue" Height="60" Margin="10" PointerPressed="StackPanel_PointerPressed"/>
-            <Rectangle Name="ColorAmariyo" Fill="Green" Height="60" Margin="10" PointerPressed="StackPanel_PointerPressed"/>
+            <Rectangle Name="ColorBerde" Fill="Yellow" Height="60" Margin="10" PointerPressed="StackPanel_PointerPressed"/>
             <Rectangle Name="ColorRojo" Fill="Red" Height="60" Margin="10" PointerPressed="StackPanel_PointerPressed"/>
             <TextBlock Name="Testo"/>
         </StackPanel>
