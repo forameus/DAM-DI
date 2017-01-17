@@ -98,6 +98,12 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="NicolasPage.xaml.cs">
+      <DependentUpon>NicolasPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PepePage.xaml.cs">
+      <DependentUpon>PepePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -109,8 +115,12 @@
   <ItemGroup>
     <Content Include="Assets\background.jpg" />
     <Content Include="Assets\cage.png" />
+    <Content Include="Assets\cage2.png" />
     <Content Include="Assets\lebron.png" />
+    <Content Include="Assets\nicolascage.jpg" />
     <Content Include="Assets\pepe.png" />
+    <Content Include="Assets\pepe1.jpg" />
+    <Content Include="Assets\pepe2.jpg" />
     <Content Include="Assets\trump.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
@@ -129,6 +139,14 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="NicolasPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PepePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Resources\Diccionario.xaml">
       <SubType>Designer</SubType>

@@ -22,29 +22,29 @@
             </Grid.ColumnDefinitions>
             <Button Grid.Column="0" Style="{StaticResource botonMenuPpal}">
                 <StackPanel Orientation="Horizontal">
-                    <Image Source="Assets/cage.png" MaxHeight="45"/>
-                    <TextBlock Text="OPSIÓN 1" FontSize="45"/>
+                    <Image Source="Assets/cage2.png" MaxHeight="45"/>
+                    <TextBlock Text="Nicolas Page" FontSize="45"/>
                 </StackPanel>
             </Button>
 
-            <Button Grid.Column="1" Style="{StaticResource botonMenuPpal}">
+            <Button Grid.Column="1" Style="{StaticResource botonMenuPpal}" Click="Button2_Click">
                 <StackPanel Orientation="Horizontal">
                     <Image Source="Assets/pepe.png" MaxHeight="45"/>
-                    <TextBlock Text="OPCIÓN 2" FontSize="45"/>
+                    <TextBlock Text="Pepes" FontSize="45"/>
                 </StackPanel>
             </Button>
 
-            <Button Grid.Column="2" Style="{StaticResource botonMenuPpal}">
+            <Button Grid.Column="2" Style="{StaticResource botonMenuPpal}" Click="Button3_Click">
                 <StackPanel Orientation="Horizontal">
                     <Image Source="Assets/trump.png" MaxHeight="45"/>
-                    <TextBlock Text="OPCIÓN 3" FontSize="45"/>
+                    <TextBlock Text="Trump" FontSize="45"/>
                 </StackPanel>
             </Button>
 
-            <Button Grid.Column="3" Style="{StaticResource botonMenuPpal}">
+            <Button Grid.Column="3" Style="{StaticResource botonMenuPpal}" Click="Button4_Click">
                 <StackPanel Orientation="Horizontal">
                     <Image Source="Assets/lebron.png" MaxHeight="45"/>
-                    <TextBlock Text="OPPSIÓFGN 4" FontSize="45"/>
+                    <TextBlock Text="YokeseXD" FontSize="45"/>
                 </StackPanel>
             </Button>
         </Grid>
@@ -54,7 +54,9 @@
                 <ColumnDefinition Width="2*" />
                 <ColumnDefinition Width="1*" />
             </Grid.ColumnDefinitions>
-            <Frame Name="Freim"></Frame>
+
+            <Frame x:Name="Freim" Grid.Column="0"/>
+
             <Image Source="Assets/background.jpg" Grid.Column="1" Stretch="UniformToFill" />
         </Grid>
     </Grid>

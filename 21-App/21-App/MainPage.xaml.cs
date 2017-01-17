@@ -25,6 +25,27 @@ namespace _21_App
         public MainPage()
         {
             this.InitializeComponent();
+            Freim.Navigate(typeof(NicolasPage));
+        }
+
+        private void Button1_Click(object sender, RoutedEventArgs e)
+        {
+            Freim.Navigate(typeof(NicolasPage));
+        }
+
+        private void Button2_Click(object sender, RoutedEventArgs e)
+        {
+            Freim.Navigate(typeof(PepePage));
+        }
+
+        private void Button3_Click(object sender, RoutedEventArgs e)
+        {
+            Freim.Navigate(typeof(NicolasPage));
+        }
+
+        private void Button4_Click(object sender, RoutedEventArgs e)
+        {
+            Freim.Navigate(typeof(NicolasPage));
         }
     }
 }
