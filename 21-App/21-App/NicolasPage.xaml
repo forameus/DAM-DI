@@ -1,0 +1,28 @@
+﻿<Page
+    x:Class="_21_App.NicolasPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:_21_App"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+
+    <Grid Background="LightBlue">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        
+        <Image Style="{StaticResource imagenLogoIzq}" Source="Assets\nicolascage.jpg"/>
+        <TextBlock Style="{StaticResource textoLogo}" Text="Nicolas Page" />
+        <Image Style="{StaticResource imagenLogoDer}" Source="Assets\nicolascage.jpg"/>
+        
+        <Slider Name="Slider" Grid.Row="1" Margin="50" ValueChanged="Slider_ValueChanged" Maximum="69"/>
+        <Image Name="caraCage1" Grid.Row="1" VerticalAlignment="Bottom" Margin="50" Source="Assets\cage.png" Height="0" />
+        <Image Name="caraCage2" Grid.Row="1" VerticalAlignment="Bottom" Margin="50" Source="Assets\cage.png" Height="0" Style="{StaticResource caraCageDobladaIzq}"/>
+        <Image Name="caraCage3" Grid.Row="1" VerticalAlignment="Bottom" Margin="50" Source="Assets\cage.png" Height="0" Style="{StaticResource caraCageDobladaDer}"/>
+        <Image Name="caraCage4" Grid.Row="1" VerticalAlignment="Bottom" Margin="50" Source="Assets\cage.png" Height="0" Style="{StaticResource caraCageDobladaIzq}" HorizontalAlignment="Left"/>
+        <Image Name="caraCage5" Grid.Row="1" VerticalAlignment="Bottom" Margin="50" Source="Assets\cage.png" Height="0" Style="{StaticResource caraCageDobladaDer}" HorizontalAlignment="Right"/>
+    </Grid>
+</Page>

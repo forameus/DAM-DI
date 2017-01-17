@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="_04_StackPanel2_WU.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:_04_StackPanel2_WU"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel Background="White">
+        <TextBlock Name="Titulo" Text="MI APPLICACIÓN" HorizontalAlignment="Center" FontSize="30" Margin="20"/>
+        <Border BorderBrush="Red" Background="LightBlue">
+            <StackPanel Orientation="Horizontal" Padding="10">
+                <Button Name="Boton1" Content="Boton1" VerticalAlignment="Top" Margin="0,0,10,0"/>
+                <Button Name="Boton2" Content="Boton2" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                <Button Name="Boton3" Content="Boton3" VerticalAlignment="Bottom" Margin="0,0,10,0"/>
+            </StackPanel>
+        </Border>
+        <Border Background="LightCoral">
+            <StackPanel Orientation="Vertical" Padding="10">
+                <Button Name="Boton4" Content="Boton4" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Padding="0,0,20,0"  Margin="0,0,10,0"/>
+            </StackPanel>            
+        </Border>
+    </StackPanel>
+</Page>

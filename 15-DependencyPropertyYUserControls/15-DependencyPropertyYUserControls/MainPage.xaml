@@ -1,0 +1,24 @@
+﻿<Page
+    x:Class="_15_DependencyPropertyYUserControls.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:_15_DependencyPropertyYUserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:_15_DependencyPropertyYUserControls.UserControls"
+    mc:Ignorable="d">
+    <ScrollViewer>
+        <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+            <!--<controls:fichaAlumno Nombre="Alberto" Apellidos="Navarro Gordillo" />
+            <controls:fichaAlumno Nombre="Roberta" Apellidos="Polaco Delgado" Foto="http://arcdn02.mundotkm.com/2015/08/room6.jpg" />
+            <controls:fichaAlumno Nombre="Norberto" Apellidos="Gusmán Rodrigues" Foto="http://uscdn02.mundotkm.com/2015/10/pitbull-600x400.jpg"/>
+            <controls:fichaAlumno Nombre="Umberto" Apellidos="Jiménez Gallardo"/>
+            <controls:fichaAlumno Nombre="Berto" Apellidos="Romero Tomás" Foto="http://www.elterrat.com/media/fotografiasxii/eea_bertoromero_1.jpg"/>
+            <controls:fichaAlumno Nombre="Filiberto" Apellidos="Naranjo Palomo" Foto="http://www.venevision.com/sites/default/files/imagecache/600x400_despliegue/juan-carlos-gardie.jpg"/>-->
+
+            <controls:fichaAnimador Nombre="TEST 1" Video="QRQv74J7oSk"/>
+            <controls:fichaAnimador Nombre="TEST 2" Video="22UGoKLa6Vs"/>
+            <controls:fichaAnimador Nombre="TEST 3"/>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

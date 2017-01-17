@@ -1,0 +1,63 @@
+﻿<Page
+    x:Class="_21_App.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:_21_App"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Background="#8E8CD8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Style="{StaticResource botonMenuPpal}" Click="Button1_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Assets/cage2.png" MaxHeight="45"/>
+                    <TextBlock Text="Nicolas Page" FontSize="45"/>
+                </StackPanel>
+            </Button>
+
+            <Button Grid.Column="1" Style="{StaticResource botonMenuPpal}" Click="Button2_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Assets/pepe.png" MaxHeight="45"/>
+                    <TextBlock Text="Pepes" FontSize="45"/>
+                </StackPanel>
+            </Button>
+
+            <Button Grid.Column="2" Style="{StaticResource botonMenuPpal}" Click="Button3_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Assets/trump.png" MaxHeight="45"/>
+                    <TextBlock Text="Trump" FontSize="45"/>
+                </StackPanel>
+            </Button>
+
+            <Button Grid.Column="3" Style="{StaticResource botonMenuPpal}" Click="Button4_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Assets/lebron.png" MaxHeight="45"/>
+                    <TextBlock Text="YokeseXD" FontSize="45"/>
+                </StackPanel>
+            </Button>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+
+            <Frame x:Name="Freim" Grid.Column="0"/>
+
+            <Image Source="Assets/background.jpg" Grid.Column="1" Stretch="UniformToFill" />
+        </Grid>
+    </Grid>
+</Page>

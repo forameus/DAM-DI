@@ -1,0 +1,24 @@
+﻿<UserControl Name="userControl"
+    x:Class="_15_DependencyPropertyYUserControls.UserControls.fichaAnimador"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:_15_DependencyPropertyYUserControls.UserControls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <WebView Name="wvVideo" Source="{Binding ElementName=userControl, Path=Video}" MinHeight="200" MinWidth="200"/>
+            <StackPanel Orientation="Vertical">            
+                <TextBlock Name="tblNombre" Text="{Binding ElementName=userControl, Path=Nombre}" HorizontalAlignment="Center"/>
+            </StackPanel>
+
+            <!--<MediaPlayerElement Name="imgFoto" Source="{Binding ElementName=userControl, Path=Foto}" MaxHeight="200"/>
+            <TextBlock Name="tblNombre" Text="{Binding ElementName=userControl, Path=Nombre}" HorizontalAlignment="Center"/>
+            <TextBlock Name="tblApellidos" Text="{Binding ElementName=userControl, Path=Apellidos}" HorizontalAlignment="Center"/>-->
+        </StackPanel>
+    </Grid>
+</UserControl>
