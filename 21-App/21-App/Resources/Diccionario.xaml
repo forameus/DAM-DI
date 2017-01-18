@@ -66,6 +66,49 @@
         <Setter Property="Margin" Value="40"/>
         <Setter Property="FontSize" Value="30"/>
     </Style>
+<<<<<<< HEAD
 
     
+=======
+    
+    <!--TrumpPage-->
+    <Style TargetType="Grid" x:Key="fondoTrump">
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint=".5,0" EndPoint=".5,1">
+                    <GradientStop Offset="0" Color="Gold"/>
+                    <GradientStop Offset="1" Color="OrangeRed"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>        
+    </Style>
+
+
+    <Style TargetType="Button" x:Key="btnTrumpOk">
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+        <Setter Property="Content" Value="&#xE00B;"/>
+        <Setter Property="FontFamily" Value="Segoe UI Symbol"/>
+        <Setter Property="FontSize" Value="25"/>
+        <Setter Property="Foreground" Value="Red"/>
+        <Setter Property="MinWidth" Value="40"/>
+    </Style>
+
+    <Style TargetType="Button" x:Key="btnTrumpNo">
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="Content" Value="&#xE00C;"/>
+        <Setter Property="FontFamily" Value="Segoe UI Symbol"/>
+        <Setter Property="FontSize" Value="25"/>
+        <Setter Property="Foreground" Value="Black"/>
+    </Style>
+
+    <Style TargetType="TextBlock" x:Key="txtTrumpTitulo">
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="FontFamily" Value="Arial"/>
+        <Setter Property="FontSize" Value="40"/>
+        <Setter Property="Foreground" Value="DarkBlue"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+    </Style>
+
+>>>>>>> 24f4b8cd0881d0f4a931d28b916758e35ba4122d
 </ResourceDictionary>

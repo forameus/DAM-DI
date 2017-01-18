@@ -20,7 +20,11 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
+<<<<<<< HEAD
             <Button Grid.Column="0" Style="{StaticResource botonMenuPpal}">
+=======
+            <Button Grid.Column="0" Style="{StaticResource botonMenuPpal}" Click="Button1_Click">
+>>>>>>> 24f4b8cd0881d0f4a931d28b916758e35ba4122d
                 <StackPanel Orientation="Horizontal">
                     <Image Source="Assets/cage2.png" MaxHeight="45"/>
                     <TextBlock Text="Nicolas Page" FontSize="45"/>

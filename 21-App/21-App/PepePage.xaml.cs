@@ -24,17 +24,30 @@ namespace _21_App
     public sealed partial class PepePage : Page
     {
         private Random ran;
+<<<<<<< HEAD
+=======
+        private string[] uris = { "ms-appx:///Assets/pepe1.jpg", "ms-appx:///Assets/pepe2.jpg", "ms-appx:///Assets/pepe3.jpg", "ms-appx:///Assets/pepe4.jpg", "ms-appx:///Assets/pepe5.jpg", "ms-appx:///Assets/pepe6.jpg" };
+>>>>>>> 24f4b8cd0881d0f4a931d28b916758e35ba4122d
 
         public PepePage()
         {
             this.InitializeComponent();
             ran = new Random();
+<<<<<<< HEAD
+=======
+
+>>>>>>> 24f4b8cd0881d0f4a931d28b916758e35ba4122d
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+<<<<<<< HEAD
             
             fotoPepe.Source = new BitmapImage(new Uri("ms-appx:///Assets/pepe"+ran.Next(1,2)+".jpg"));
+=======
+            string s = uris[ran.Next(1, uris.Length)];
+            fotoPepe.Source = new BitmapImage(new Uri(s, UriKind.Absolute));
+>>>>>>> 24f4b8cd0881d0f4a931d28b916758e35ba4122d
         }
     }
 }
