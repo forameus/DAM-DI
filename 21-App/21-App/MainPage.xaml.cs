@@ -40,20 +40,12 @@ namespace _21_App
 
         private void Button3_Click(object sender, RoutedEventArgs e)
         {
-<<<<<<< HEAD
-            Freim.Navigate(typeof(NicolasPage));
-=======
             Freim.Navigate(typeof(TrumpPage));
->>>>>>> 24f4b8cd0881d0f4a931d28b916758e35ba4122d
         }
 
         private void Button4_Click(object sender, RoutedEventArgs e)
         {
-<<<<<<< HEAD
-            Freim.Navigate(typeof(NicolasPage));
-=======
             Freim.Navigate(typeof(BlackPage));
->>>>>>> 24f4b8cd0881d0f4a931d28b916758e35ba4122d
         }
     }
 }

@@ -8,9 +8,13 @@
     mc:Ignorable="d">
 
     <Grid Style="{StaticResource fondoTrump}">
-        <TextBlock Text="¿Casualidad o coincidencia?" Style="{StaticResource txtTrumpTitulo}"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="¿Casualidad o coincidencia?" Style="{StaticResource txtTrumpTitulo}" Grid.Row="0"/>
 
-        <StackPanel MaxHeight="500" MaxWidth="500">
+        <StackPanel MaxHeight="400" MaxWidth="400" Grid.Row="1">
             <Image Name="fotoTrump" Source="Assets/trump1.jpg" />
 
             <Grid>
