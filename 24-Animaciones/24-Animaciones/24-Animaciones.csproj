@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{0C63BDED-49F4-4304-80F6-95630294BE1B}</ProjectGuid>
+    <ProjectGuid>{E3BE4B91-24AD-4732-B1C7-F311FB0820E5}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_21_App</RootNamespace>
-    <AssemblyName>21-App</AssemblyName>
+    <RootNamespace>_24_Animaciones</RootNamespace>
+    <AssemblyName>24-Animaciones</AssemblyName>
     <DefaultLanguage>es-ES</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.14393.0</TargetPlatformVersion>
@@ -16,10 +16,7 @@
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <PackageCertificateKeyFile>21-App_TemporaryKey.pfx</PackageCertificateKeyFile>
-    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
-    <AppxPackageDir>C:\Users\anavarro\Desktop\Preuba\</AppxPackageDir>
-    <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
+    <PackageCertificateKeyFile>24-Animaciones_TemporaryKey.pfx</PackageCertificateKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -98,50 +95,20 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BlackPage.xaml.cs">
-      <DependentUpon>BlackPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="NicolasPage.xaml.cs">
-      <DependentUpon>NicolasPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PepePage.xaml.cs">
-      <DependentUpon>PepePage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TrumpPage.xaml.cs">
-      <DependentUpon>TrumpPage.xaml</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <None Include="21-App_TemporaryKey.pfx" />
+    <None Include="24-Animaciones_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\background.jpg" />
-    <Content Include="Assets\cage.png" />
-    <Content Include="Assets\cage2.png" />
-    <Content Include="Assets\lebron.png" />
-    <Content Include="Assets\nicolascage.jpg" />
-    <Content Include="Assets\ojo.gif" />
-    <Content Include="Assets\pepe.png" />
-    <Content Include="Assets\pepe1.jpg" />
-    <Content Include="Assets\pepe2.jpg" />
-    <Content Include="Assets\pepe3.jpg" />
-    <Content Include="Assets\pepe4.jpg" />
-    <Content Include="Assets\pepe5.jpg" />
-    <Content Include="Assets\pepe6.jpg" />
-    <Content Include="Assets\trump.png" />
-    <Content Include="Assets\trump1.jpg" />
-    <Content Include="Assets\trump2.jpg" />
-    <Content Include="Assets\trump3.jpg" />
-    <Content Include="Assets\trump4.jpg" />
-    <Content Include="Assets\trump5.jpg" />
-    <Content Include="Assets\trump6.jpg" />
+    <Content Include="Assets\before.jpg" />
+    <Content Include="Assets\bofeton.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -156,30 +123,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="BlackPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="NicolasPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="PepePage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Resources\Diccionario.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Page>
-    <Page Include="TrumpPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
